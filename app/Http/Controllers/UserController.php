@@ -26,4 +26,11 @@ public function Dashboard(){
     } 
 
 }
+
+public function index(){
+
+    return view('index');
+}
+
+
 }

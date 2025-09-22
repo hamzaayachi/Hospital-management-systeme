@@ -6,9 +6,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[UserController::class,'index'])->name('index');
 
 Route::get('/dashboard',[UserController::class,'Dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
